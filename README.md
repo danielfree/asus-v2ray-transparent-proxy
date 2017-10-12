@@ -1,6 +1,6 @@
 ## asus-v2ray-transparent-proxy
 
-Transparent proxy on WiFi router with v2ray+dnsmasq+ipset. Tested on Asus RT-68U Merlin firmware (7.4).
+Transparent proxy on WiFi router with v2ray+dnsmasq+ipset. Tested on Asus RT-68U Merlin firmware (380.67).
 
 ### Internal Details
 
@@ -29,7 +29,7 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 ## asus-v2ray-transparent-proxy
 
-无线路由器上跑的透明代理，使用 v2ray+dnsmasq+ipset。 在 RT-68U Merlin (7.4) 固件上测试通过。
+无线路由器上跑的透明代理，使用 v2ray+dnsmasq+ipset。 在 RT-68U Merlin (380.67) 固件上测试通过。
 
 ### 工作原理
 
