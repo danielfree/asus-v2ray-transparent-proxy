@@ -54,4 +54,4 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 6. 如果一切顺利，连上你的 WiFi 即可
 
-7. 如果想在重启路由器后可以自动启动，可以将 /jffs/start-all.sh 加入 NAT-START 脚本，可以在路由器管理界面的 Tools->Script 页面找到设置的地方
+7. 如果想在重启路由器后可以自动启动，可以将 /jffs/start-all.sh 加入 NAT-START 脚本，你可以在路由器管理界面的 Tools->Script 页面找到设置的地方
