@@ -4,7 +4,7 @@ Transparent proxy on WiFi router with v2ray+dnsmasq+ipset. Tested on Asus RT-68U
 
 ### Internal Details
 
-1. Chinese domain whitelist mode. We use [dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list) from @felixonmars and add to ipset white_list rules, so only domains in this list will be resolved via 119.29.29.29, everything else will be resolved via 202.141.162.123 (USTC LUG anti-polution DNS)
+1. Chinese domain whitelist mode. We use [dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list) from @felixonmars and add to ipset white_list rules, so only domains in this list will be resolved via 119.29.29.29, everything else will be resolved via 202.141.162.123 (USTC LUG anti-pollution DNS).
 
 2. Setup iptables to use ipset for direct connect and redirect everything else to local v2ray transparent proxy port.
 
@@ -38,7 +38,7 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 2. 使用 iptables 做分流，ipset rule 中的直接访问，剩下的流量全部走 v2ray 本地透明代理端口。
 
-3. 启动 v2ray 开放两个端口：1080 透明代理和1081 socks 代理，由 v2ray 的配置程序指定所有发往 1080 端口的数据自动转发到 1081 上。
+3. 启动 v2ray 开放两个端口：1080 透明代理和 1081 socks 代理，由 v2ray 的配置程序指定所有发往 1080 端口的数据自动转发到 1081 上。
 
 ### 使用方法
 前提要求：Asus 梅林固件，启用了 jffs 和 ssh, 以及一个可用的 v2ray 远程服务器
@@ -47,12 +47,12 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 2. 下载本 repo 中的所有文件到本地，通过 ssh 上传至 /jffs 目录
 
-3. 在路由器上修改 /jffs/config.json 将其中远程代理服务器替换为你自己使用的设置，复制到 /jffs/v2ray/cofig.json
+3. 在路由器上修改 /jffs/config.json 将其中远程代理服务器替换为你自己使用的设置，复制到 /jffs/v2ray/cofig.json
 
 4. 在路由器上修改 /jffs/nat-start.sh, 将 "YOUR_SERVER_IP" 修改为你的远程 v2ray 服务器 ip
 
-5. 在路由器上运行 `sh /jffs/dnsmasq.sh && sh /jffs/start-all.sh` 来配置 dnsmasq/v2ray 并启动相关服务
+5. 在路由器上运行 `sh /jffs/dnsmasq.sh && sh /jffs/start-all.sh` 来配置 dnsmasq/v2ray 并启动相关服务
 
 6. 如果一切顺利，连上你的 WiFi 即可
 
-7. 如果想在重启路由器后可以自动启动，可以将 /jffs/start-all.sh 加入 NAT-START 脚本，你可以在路由器管理界面的 Tools->Script 页面找到设置的地方
+7. 如果想在重启路由器后可以自动启动，可以将 /jffs/start-all.sh 加入 NAT-START 脚本，你可以在路由器管理界面的 Tools->Script 页面找到设置的地方
