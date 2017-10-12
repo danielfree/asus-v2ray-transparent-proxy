@@ -27,10 +27,9 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 7. If you want to enable this after router reboot, add /jffs/start-all.sh in NAT-START script (you can find it on router's admin web -> Tools -> Script)
 
-###
 ## asus-v2ray-transparent-proxy
 
-无线路由器上跑的透明代理，使用 v2ray+dnsmasq+ipset。 在 RT-68U Merlin (7.4) 固件上测试通过。
+无线路由器上跑的透明代理，使用 v2ray+dnsmasq+ipset。 在 RT-68U Merlin (7.4) 固件上测试通过。
 
 ### 工作原理
 
@@ -38,7 +37,7 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 2. 使用 iptables 做分流，ipset rule 中的直接访问，剩下的流量全部走 v2ray 本地透明代理端口。
 
-3. 启动 v2ray 开放两个端口：1080 透明代理和 1081 socks 代理，由 v2ray 的配置程序指定所有发往 1080 端口的数据自动转发到 1081 上。
+3. 启动 v2ray 开放两个端口：1080 透明代理和 1081 socks 代理，由 v2ray 的配置程序指定所有发往 1080 端口的数据自动转发到 1081 上。
 
 ### 使用方法
 前提要求：Asus 梅林固件，启用了 jffs 和 ssh, 以及一个可用的 v2ray 远程服务器
@@ -55,4 +54,4 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 6. 如果一切顺利，连上你的 WiFi 即可
 
-7. 如果想在重启路由器后可以自动启动，可以将 /jffs/start-all.sh 加入 NAT-START 脚本，你可以在路由器管理界面的 Tools->Script 页面找到设置的地方
+7. 如果想在重启路由器后可以自动启动，可以将 /jffs/start-all.sh 加入 NAT-START 脚本，可以在路由器管理界面的 Tools->Script 页面找到设置的地方
