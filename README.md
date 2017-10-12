@@ -46,7 +46,7 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 2. 下载本 repo 中的所有文件到本地，通过 ssh 上传至 /jffs 目录
 
-3. 在路由器上修改 /jffs/config.json 将其中远程代理服务器替换为你自己使用的设置，复制到 /jffs/v2ray/cofig.json
+3. 在路由器上修改 /jffs/config.json 将其中远程代理服务器替换为你自己使用的设置，复制到 /jffs/v2ray/config.json
 
 4. 在路由器上修改 /jffs/nat-start.sh, 将 "YOUR_SERVER_IP" 修改为你的远程 v2ray 服务器 ip
 
