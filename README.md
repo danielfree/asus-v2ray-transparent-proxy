@@ -8,7 +8,7 @@ Transparent proxy on WiFi router with v2ray+dnsmasq+ipset. Tested on Asus RT-68U
 
 2. Setup iptables to use ipset for direct connect and redirect everything else to local v2ray transparent proxy port.
 
-3. Start v2ray on router opening two ports: 1080 as transparent proxy, 1081 as socks port. Requests from 1080 will be forwarded as defined in v2ray config.
+3. Start v2ray on router opening one port: 1080 as transparent proxy. Requests from 1080 will be forwarded as defined in v2ray config.
 
 ### Usage
 Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ray server
@@ -37,7 +37,7 @@ Requirements: Asus Merlin firmware, jffs enabled, ssh connection, a working v2ra
 
 2. 使用 iptables 做分流，ipset rule 中的直接访问，剩下的流量全部走 v2ray 本地透明代理端口。
 
-3. 启动 v2ray 开放两个端口：1080 透明代理和 1081 socks 代理，由 v2ray 的配置程序指定所有发往 1080 端口的数据自动转发。
+3. 启动 v2ray 开放一个端口：1080 透明代理，由 v2ray 的配置程序指定所有发往 1080 端口的数据自动转发。
 
 ### 使用方法
 前提要求：Asus 梅林固件，启用了 jffs 和 ssh, 以及一个可用的 v2ray 远程服务器

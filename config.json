@@ -3,27 +3,17 @@
         "loglevel": "warning"
     },
     "inbound": {
-        "port": 1081,
+        "port": 1080,
         "listen": "127.0.0.1",
-        "protocol": "socks",
+        "protocol": "dokodemo-door",
         "settings": {
-            "auth": "noauth",
-            "udp": false,
-            "ip": "127.0.0.1"
+            "address": "127.0.0.1",
+            "port": 1080,
+            "network": "tcp,udp",
+            "timeout": 0,
+            "followRedirect": true
         }
     },
-    "inboudDetour": [
-        {
-            "protocol": "dokodemo-door",
-            "settings": {
-                "address": "127.0.0.1",
-                "port": 1080,
-                "network": "tcp,udp",
-                "timeout": 0,
-                "followRedirect": true
-            }
-        }
-    ],
     "outbound": {
         "protocol": "vmess",
         "settings": {
