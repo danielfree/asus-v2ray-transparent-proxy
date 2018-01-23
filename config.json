@@ -55,26 +55,6 @@
             "domainStrategy": "IPIfNonMatch",
             "rules": [
                 {
-                    "type": "field",
-                    "port": "1-52",
-                    "outboundTag": "direct"
-                },
-                {
-                    "type": "field",
-                    "port": "54-79",
-                    "outboundTag": "direct"
-                },
-                {
-                    "type": "field",
-                    "port": "81-442",
-                    "outboundTag": "direct"
-                },
-                {
-                    "type": "field",
-                    "port": "444-65535",
-                    "outboundTag": "direct"
-                },
-                {
                     "type": "chinasites",
                     "outboundTag": "direct"
                 },
